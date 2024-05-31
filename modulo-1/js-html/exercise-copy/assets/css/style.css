@@ -58,17 +58,5 @@ form button:hover{
 }
 
 form button:active{
-    background-color: rgb(0, 252, 147);
-}
-
-.result-paragraph{
-    background-color:var(--primary-color-darker);
-    color: aliceblue;
-    padding: 10px;
-    margin: 5px;
-    width: 100%;
-}
-
-#result {
-    margin-top: 10px;
+    background-color: red;
 }
