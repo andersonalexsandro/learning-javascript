@@ -29,3 +29,13 @@ console.log(myName + " tem " + age + " anos, pesa " + weigh + " kg \ntem " + hig
 let year = 2024
 const born_year = year - parseInt(age)
 console.log(`${myName} nasceu em ${born_year}` )
+
+let varA = 'A'; // B
+let varB = 'B'; // C
+let varC = 'C'; // A
+
+[varA, varB, varC] = [varB, varC, varA];
+
+console.log(varA); // B
+console.log(varB); // C
+console.log(varC); // A
