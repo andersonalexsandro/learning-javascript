@@ -43,7 +43,8 @@ function calculateIMC(weigh, high){
     if (validadeInput(weigh) && validadeInput(high)){
         return (weigh / (high ** 2)).toFixed(2)       
     }
-    return null
+    if(!validadeInput(weigh)) return 'weigh must be more then 0'
+    if(!validadeInput(high)) return 'high must be more then 0'
 }
 
 function validadeInput(number){
