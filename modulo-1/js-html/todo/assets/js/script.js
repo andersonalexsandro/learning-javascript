@@ -27,7 +27,8 @@ function createTask(toDo){
     li.innerText = toDo;
     createDeleteButton(li);
     tasks.appendChild(li);
-    clearInput();
+    clearAndFocusInput();
+    saveTasks();
 }
 
 function createDeleteButton(li){
@@ -38,7 +39,21 @@ function createDeleteButton(li){
     li.appendChild(deleteButton);
 }
 
-function clearInput(){
+function clearAndFocusInput(){
     inputTask.value = '';
     inputTask.focus();
+}
+
+function saveTasks(){
+    const liTasks = tasks.querySelectorAll('li');
+    const taskList = []
+
+    for (let task of liTasks){
+        let taskText = task.innerText;
+        taskText = taskText.replace('Delete', '').trim();
+        taskList.push(taskText)
+    }
+
+    const tasksJSON = JSON.stringify(taskList)
+
 }
