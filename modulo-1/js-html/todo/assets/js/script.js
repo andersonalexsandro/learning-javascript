@@ -2,6 +2,8 @@ const inputTask = document.querySelector(".input-task");
 const addButton = document.querySelector(".btn-add-task");
 const tasks = document.querySelector(".tasks");
 
+readLocalTasks();
+
 addButton.addEventListener('click', function (event){
     addTaskLogic();
 });
@@ -12,8 +14,11 @@ inputTask.addEventListener('keypress', function(event){
 
 
 document.addEventListener('click', function(event){
-    const el = event.target;
-    if (el.classList.contains('delete-button')) el.parentElement.remove();
+    const element = event.target;
+    if (element.classList.contains('delete-button')){
+        element.parentElement.remove();
+        saveTasks();
+    } 
 })
 
 function addTaskLogic(){
@@ -55,5 +60,10 @@ function saveTasks(){
     }
 
     const tasksJSON = JSON.stringify(taskList)
+    localStorage.setItem('tasks', tasksJSON)
+}
 
+function readLocalTasks(){
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    for (let task of tasks) createTask(task);
 }
