@@ -18,3 +18,12 @@ console.log(doubleValue(2))
 
 const doubleValueAgain = n => n * 2
 console.log(doubleValueAgain(3))
+
+console.log("Pão de carne");
+
+function rand(min = 1000, max = 3000){
+    const num = Math.random() * (max - min) + min;
+    return Math.floor(num);
+}
+
+console.log(rand())

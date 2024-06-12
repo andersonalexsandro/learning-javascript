@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --orange: #FF9500;
+    --orange-darker: #db8000;
+    --black: #1C1C1C;
+    --gray: #505050;
+    --gray-darker: #3d3d3d;
+    --whithe: #D4D4D2;
+    --whithe-darker: #afafaf;
+}
+
+body{
+    background-color: var(--primary-color-darker);
+}
+
+.container{
+    background-color: var(--black);
+    border-radius: 5px;
+    padding: 10px 15px;
+    max-width: 200px;
+}
+ 
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+}
+
+
+.btn{
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.orange{
+    background-color: var(--orange);
+}
+
+.orange:hover{
+    background-color: var(--orange-darker)
+}
+
+.gray{
+    background-color: var(--gray);
+}
+
+.gray:hover{
+    background-color: var(--gray-darker);
+}
+
+.white{
+    background-color: var(--whithe);
+    color: black;
+} 
+
+.white:hover{
+    background-color:var(--whithe-darker);
+}
+
+.display {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: var(--black);
+    border: none;
+    color: var(--whithe);
+    font-size: 40px;
+    width: 100%;
+    text-align: right;
+}
+
+.zero {
+    grid-column: span 2;
+    background-color: var(--gray);
+    border-radius: 60px;
+    width: 100px;
+}
+
+.zero:hover{
+    background-color: var(--gray-darker);
+}
