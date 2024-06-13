@@ -77,7 +77,6 @@ body{
 
 .zero {
     grid-column: span 2;
-    background-color: var(--gray);
     border-radius: 60px;
     width: 100px;
 }
