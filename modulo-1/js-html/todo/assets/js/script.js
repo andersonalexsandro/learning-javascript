@@ -50,10 +50,10 @@ function clearAndFocusInput(){
 }
 
 function saveTasks(){
-    const liTasks = tasks.querySelectorAll('li');
+    const lis = tasks.querySelectorAll('li');
     const taskList = []
 
-    for (let task of liTasks){
+    for (let task of lis){
         let taskText = task.innerText;
         taskText = taskText.replace('Delete', '').trim();
         taskList.push(taskText)
