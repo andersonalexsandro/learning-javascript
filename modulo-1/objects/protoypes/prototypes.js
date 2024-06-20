@@ -29,6 +29,8 @@ const p2 = {
     price: 50
 };
 
+const p3 = Object.create(Product.prototype);
+
 Object.setPrototypeOf(p2, Product.prototype);
 
 Product.prototype.increase = function (percentual){
@@ -43,7 +45,9 @@ Product.prototype.discount = function (percentual){
 let p1 = new Product('Condom', 10);
 p1.increase(100);
 console.log(p1.price);
+console.log(p1);
 
 p2.increase(100);
 console.log(p2.price);
+console.log(p2);
 
