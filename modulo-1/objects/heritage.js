@@ -20,7 +20,7 @@ function Shirt(name, price, color){
 Shirt.prototype = Object.create(Product.prototype);
 Shirt.prototype.constructor = Shirt;
 
-
+ 
 
 
 let shirt = new Shirt('Gucci', 1000, 'black');
