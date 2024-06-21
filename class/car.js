@@ -1,6 +1,6 @@
 const _speedLimit = Symbol('speedLimit');
 
-class Car{
+class Vehicle{
     constructor(name, speed){
         this.name = name;
         this.speed = speed;
@@ -30,16 +30,44 @@ class Car{
     }
 }
 
-const car1 = new Car('Fusca', 0)
+const vehicle = new Vehicle('Fusca', 0)
 
-for(let i = 0; i<=120; i++) car1.speedUp();
-console.log(car1.speed);
-car1.speedLimit = 200;
+for(let i = 0; i<=120; i++) vehicle.speedUp();
+console.log(vehicle.speed);
+vehicle.speedLimit = 200;
 
 for(let i = 0; i<=80; i++){
-    car1.speedUp();
+    vehicle.speedUp();
 } 
-console.log(car1.speed);
+console.log(vehicle.speed);
 
-car1.speedLimit = 0;
+vehicle.speedLimit = 0;
+
+// heritage
+
+class Car extends Vehicle{
+    constructor(name, speed, convertible){
+        super(name, speed);
+        this.convertible = convertible;
+    }
+}
+
+const car = new Car('Fiat', 0, true);
+
+console.log()
+console.log('##################')
+console.log('#######car########')
+console.log('##################')
+console.log()
+
+for(let i = 0; i<=120; i++) car.speedUp();
+console.log(car.speed);
+car.speedLimit = 200;
+
+for(let i = 0; i<=80; i++){
+    car.speedUp();
+} 
+console.log(car.speed);
+
+car.speedLimit = 0;
 
