@@ -47,3 +47,21 @@ Promise.all([promise1, promise2, promise3]).then(values => {
 }).catch(error => {
     console.error(error);
 });
+
+
+async function executeWaitASecond() {
+    try {
+        let response = await waitASecond('Phrase 1', rand(1, 3));
+        console.log(response);
+        
+        response = await waitASecond('Phrase 2', rand(1, 3));
+        console.log(response);
+        
+        response = await waitASecond('Phrase 3', rand(1, 3));
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+executeWaitASecond();
